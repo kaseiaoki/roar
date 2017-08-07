@@ -1,0 +1,7 @@
+[package]
+name = "roar"
+version = "0.1.0"
+authors = ["kaseiaoki <aoki.11235813@ezweb.ne.jp>"]
+
+[dependencies]
+rand="0.3.0"
