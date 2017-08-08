@@ -25,15 +25,16 @@ fn roar(rng: u32) {
         "７",
         "９",
         "０",
+        "　",
     ];
 
     let mut rng = rand::thread_rng().gen_range(1, 71);
     print!("{}{}", rng, Em[rng % 10]);
     match rng {
+        rng if rng % 3 == 0 && rng % 2 == 0 => print!("{} ", Em[rng % 10]),
         rng if rng % 2 == 0 => print!("{}", rng),
         rng if rng % 3 == 0 => print!("{}", Em[rng % 10]),
-        rng if rng % 5 == 0 => print!("{}", Em[rng % 10]),
-        _ => print!("{}", Em[rng % 10]),
+        _ => print!("{}", Em[10]),
     }
 }
 
